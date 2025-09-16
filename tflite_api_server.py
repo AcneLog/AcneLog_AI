@@ -31,6 +31,14 @@ def preprocess_image(image_bytes):
     img = np.expand_dims(img, axis=0).astype(np.float32)
     return img
 
+@app.get("/health")
+def health_check():
+    return {"status": "healthy"}
+
+@app.get("/")
+def read_root():
+    return {"message": "Acne Classification API", "status": "running"}
+
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     try:
@@ -54,7 +62,11 @@ async def predict(file: UploadFile = File(...)):
 
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Prediction failed: {str(e)}")
-    
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+
 '''
 requirements: pip3 install -r requirements.txt
 서버 실행 방법: uvicorn tflite_api_server:app --reload --host 0.0.0.0 --port 8000
