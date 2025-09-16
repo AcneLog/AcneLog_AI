@@ -1,0 +1,74 @@
+# Python 관련
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+*.ipynb
+.ipynb_checkpoints/
+
+# 데이터 폴더 (용량이 큰 경우)
+data/
+datasets/
+
+# 문서 및 README
+docs/
+README.md
+*.md
+
+# Git 관련
+.git/
+.gitignore
+
+# IDE 설정
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 불필요한 모델 파일들 (TFLite만 사용)
+*.h5
+*.keras
+*.pb
+*.ckpt
+saved_model/
+
+# 로그 파일
+*.log
+logs/
+
+# 임시 파일
+*.tmp
+*.temp
+.cache/
+
+# OS 관련
+.DS_Store
+Thumbs.db
+
+# Docker 관련
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# 테스트 관련
+test_images/
+tests/
+*test*
+
+# 기타
+*.zip
+*.tar.gz
+.coverage
+htmlcov/
