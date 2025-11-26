@@ -1,0 +1,18 @@
+{
+    "labels": [
+        "normal",
+        "comedones",
+        "pustules",
+        "papules",
+        "folliculitis"
+    ],
+    "num_classes": 5,
+    "image_size": [
+        224,
+        224
+    ],
+    "final_val_accuracy": 0.375,
+    "final_val_loss": 1.5189778804779053,
+    "best_phase1_val_acc": 0.375,
+    "best_phase2_val_acc": 0.375
+}
