@@ -7,7 +7,7 @@ import cv2
 app = FastAPI()
 
 # 🔹 클래스 이름 매핑 (필요시 수정 가능)
-CLASS_NAMES = ["Normal", "Comedones", "Pustules", "Papules", "Folliculitis"]
+CLASS_NAMES = ["Comedones", "Pustules", "Papules", "Folliculitis"]
 
 # 🔹 TFLite Interpreter 로드
 try:
